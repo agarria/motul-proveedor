@@ -228,11 +228,11 @@ body {
     min-height: 100%;
     padding: 0;
     margin: 0;
-    color: #666;
-    background: #666;
-    overflow: hidden;
+    color: #151515;
+    background: #151515;
     user-select: none;
     -webkit-user-select: none;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -242,12 +242,274 @@ body {
     -webkit-box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+nav {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+    background: #fff;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #ED1C24;
+    transition: all .3s ease;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.sticky nav .logo img {
+    transform: translate(0,50%);
+}
+
+.links {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.links a {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0 1rem;
+    color: #151515;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-right: 1px solid #ddd;
+}
+
+.links a:focus,
+.links a:hover,
+.links a:active {
+    background: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0.2) 100%);
+    color: #ED1C24;
+}
+
+.actions {
+    position: relative;
+    display: block;
+    float: right;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.actions a {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 220px;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.actions a:nth-child(1) {
+    background: #ED1C24;
+}
+
+.actions a:nth-child(2) {
+    color: #fff;
+    background: #000;
+}
+
+header {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 300px;
+    padding: 0 100px;
+    margin: 60px 0 0 0;
+    background: url('../img/banner.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    height: 100%;
+}
+
+.text {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.new,
+.tag {
+    display: block;
+    float: none;
+    font-family: 'Graphik Bold';
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.new {
+    color: #ED1C24;
+}
+
+.slider {
+    position: relative !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 60%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.name {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.name img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 160px;
+}
+
+.name span {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.buy {
+    font-family: 'Graphik Medium';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: 0 auto;
+    color: #fff;
+    background: #ED1D24;
+    font-size: 12px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-cursor: pointer;
+    box-shadow: none;
+}
+
 main {
     position: relative;
     display: block;
     float: left;
     width: 100%;
-    height: 100%;
+    height: auto;
+    padding: 0 100px;
+    margin: 0;
+    background: #fff;
+}
+
+.selection {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
 }
@@ -260,12 +522,27 @@ main {
     width: 100%;
     height: auto;
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
 }
 
 .motul img {
-    width: 200px;
+    width: 220px;
     height: auto;
+}
+
+.type {
+    font-family: 'Graphik Semibold';
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 40px 0;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .login {
@@ -326,9 +603,9 @@ main {
     float: left;
     width: 40px;
     height: 40px;
-    color: #666;
-    font-size: 13px;
-    border: 1px solid #999;
+    color: #ddd;
+    font-size: 14px;
+    border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
 }
 
@@ -370,19 +647,19 @@ main {
     line-height: 40px;
     padding: 0 15px;
     margin: 0;
-    color: #666;
-    font-size: 13px;
-    border: 1px solid #999;
+    color: #151515;
+    font-size: 14px;
+    border: 1px solid #ddd;
     border-left: 0;
     border-radius: 0 5px 5px 0;
 }
 
 .input::-webkit-input-placeholder {
-  color: #666;
+  color: #ddd;
 }
 
 .input::placeholder {
-  color: #666;
+  color: #ddd;
 }
 
 .input:focus,
@@ -399,8 +676,8 @@ main {
     width: 100%;
     height: auto;
     margin: 10px 0 0 0;
-    font-size: 11px;
-    color: #999;
+    font-size: 12px;
+    color: #ddd;
     text-transform: capitalize;
 }
 
@@ -415,7 +692,7 @@ main {
     margin: 0;
     color: #fff;
     background: #ED1D24;
-    font-size: 13px;
+    font-size: 14px;
     border: 0;
     border-radius: 5px;
     text-transform: uppercase;
@@ -428,4 +705,414 @@ main {
 .button:hover,
 .button:active {
     outline: 0;
+}
+
+footer {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 60px 0 120px;
+    margin: 0;
+    color: #666666;
+}
+
+.footer-container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0 100px;
+}
+
+.footer-copyright,
+.footer-links {
+    position: relative;
+    display: block;
+    float: left;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-copyright {
+    width: calc(100% / 3);
+}
+
+.footer-links {
+    width: calc((100% / 3) * 2);
+}
+
+.align-links {
+    float: right;
+}
+
+.footer-logo {
+    position: relative;
+    display: block;
+    float: left;
+    width: 160px;
+    height: 45px;
+    margin-bottom: 4rem;
+}
+
+.footer-copyright p {
+    font-family: 'Graphik Medium';
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links span {
+    font-family: 'Graphik Medium';
+    color: #ED1C24;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.footer-links a {
+    font-family: 'Graphik Medium';
+    color: #666;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+}
+
+.footer-25 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links {
+    position: relative;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.social-ghost {
+    position: relative;
+    display: flex;
+    float: left;
+    min-width: 280px;
+    height: auto;
+    font-size: 30px;
+    justify-content: space-around;
+    padding: 10px 10px 0 10px;
+}
+
+.social-ghost a {
+    color: #666;
+}
+
+.social-ghost a:hover,
+.social-ghost a:focus,
+.social-ghost a:active {
+    color: #fff;
+}
+
+.filters {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 120px;
+    padding: 60px 0 0 0;
+    margin: 0;
+    z-index: 666;
+    background: url('../img/strip.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.filters:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(237,28,36,0.9);
+}
+
+.inputs {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 60px;
+    padding: 0 100px;
+    margin: 0;
+    background: #ED1C24;
+    transition: all .3s ease;
+}
+
+.inputs input {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0 1rem;
+    color: #151515;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    z-index: 9999;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.inputs input:focus,
+.inputs input:hover,
+.inputs input:active {
+    outline: 0;
+}
+
+.inputs input::-webkit-input-placeholder {
+  color: #151515;
+}
+
+.inputs input::placeholder {
+  color: #151515;
+}
+
+.inputs-actions {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 220px;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    color: #fff;
+    background: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.to-select,
+.to-go {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.to-select {
+    float: left;
+}
+
+.to-go {
+    float: right;
+}
+
+select {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.sticky #filters {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding: 0;
+    height: 60px;
+}
+
+.sticky #filters .inputs {
+    padding: 0 220px;
+}
+
+.sticky main {
+    padding-top: 120px;
+}
+
+.categories {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid #ddd;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.item:hover .item-name {
+    margin: 0 0 0 25px;
+}
+
+.item-type {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-right: 1px solid #ddd;
+}
+
+.item-type img {
+    width: 60%;
+    height: auto;
+}
+
+.item-name {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+    transition: all .3s ease;
+}
+
+.products {
+    position: relative;
+    display: flex;
+    flex-direction: initial;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    float: left;
+    width: calc(100% - 300px);
+    height: auto;
+    padding: 0;
+    margin: 0 0 0 300px;
+    border-left: 1px solid #ddd;
+}
+
+.products .product {
+    padding: 40px;
+    width: 25%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.products .product .name span {
+    color: #ED1C24;
+    margin-bottom: 5px;
+}
+
+.products .product .name p {
+    font-family: 'Graphik Regular';
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.shop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.more,
+.less {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #ED1C24;
+    cursor: pointer;
+}
+
+.total {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: block;
+    float: left;
+    width: 60px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    color: #ED1C24;
+    font-size: 20px;
+    text-align: center;
 }
