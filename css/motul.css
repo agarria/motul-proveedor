@@ -229,7 +229,7 @@ body {
     padding: 0;
     margin: 0;
     color: #151515;
-    background: #151515;
+    background: #fff;
     user-select: none;
     -webkit-user-select: none;
     scroll-behavior: smooth;
@@ -247,7 +247,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -277,18 +277,11 @@ nav {
     height: 100%;
     padding: 0;
     margin: 0;
-    background: #ED1C24;
-    transition: all .3s ease;
 }
 
 .logo img {
     width: auto;
     height: 100%;
-    transition: all .3s ease;
-}
-
-.sticky nav .logo img {
-    transform: translate(0,50%);
 }
 
 .links {
@@ -353,11 +346,11 @@ nav {
     text-transform: uppercase;
 }
 
-.actions a:nth-child(1) {
+.red {
     background: #ED1C24;
 }
 
-.actions a:nth-child(2) {
+.black {
     color: #fff;
     background: #000;
 }
@@ -715,7 +708,8 @@ footer {
     height: auto;
     padding: 60px 0 120px;
     margin: 0;
-    color: #666666;
+    color: #666;
+    background: #151515;
 }
 
 .footer-container {
@@ -844,22 +838,8 @@ footer {
     padding: 60px 0 0 0;
     margin: 0;
     z-index: 666;
-    background: url('../img/strip.jpg');
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.filters:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(237,28,36,0.9);
+    background: #ED1C24;
+    transition: background .3s ease;
 }
 
 .inputs {
@@ -875,7 +855,7 @@ footer {
 }
 
 .inputs input {
-    font-family: 'Graphik Bold';
+    font-family: FontAwesome, Graphik Bold;
     position: relative;
     display: flex;
     align-items: center;
@@ -886,13 +866,12 @@ footer {
     margin: 0;
     font-size: 14px;
     padding: 0 1rem;
-    color: #151515;
+    color: #ED1C24;
     text-decoration: none;
     text-transform: uppercase;
     border: 0;
     z-index: 9999;
     border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 .inputs input:focus,
@@ -902,11 +881,25 @@ footer {
 }
 
 .inputs input::-webkit-input-placeholder {
-  color: #151515;
+  color: #ED1C24;
 }
 
 .inputs input::placeholder {
-  color: #151515;
+  color: #ED1C24;
+}
+
+.sticky .inputs input {
+    color: #fff;
+    background: #ED1C24;
+    border-right: 1px solid #fff;
+}
+
+.sticky .inputs input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.sticky .inputs input::placeholder {
+  color: #fff;
 }
 
 .inputs-actions {
@@ -923,8 +916,13 @@ footer {
     padding: 0;
     color: #fff;
     background: #000;
+    cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.inputs-actions i {
+    margin: 0 10px 0 0;
 }
 
 .to-select,
@@ -964,10 +962,12 @@ select {
     left: 0;
     padding: 0;
     height: 60px;
+    background: transparent;
 }
 
 .sticky #filters .inputs {
     padding: 0 220px;
+    background: transparent;
 }
 
 .sticky main {
@@ -983,6 +983,7 @@ select {
     height: 100%;
     padding: 0;
     margin: 0;
+    border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
 }
 
@@ -1045,6 +1046,7 @@ select {
     height: auto;
     padding: 0;
     margin: 0 0 0 300px;
+    border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
 }
 
@@ -1115,4 +1117,158 @@ select {
     color: #ED1C24;
     font-size: 20px;
     text-align: center;
+}
+
+.current {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cases {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 0 0 0 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cases span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.cases label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 25px;
+    padding: 0;
+    color: #fff;
+    font-size: 12px;
+    background: #000;
+    text-align: center;
+}
+
+.option-selection {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 100px 75px;
+    margin: 0;
+    background: url('../img/category.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 25%;
+    height: auto;
+    padding: 25px;
+    margin: 0;
+}
+
+.main {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    background: #fff;
+}
+
+.head img {
+    width: auto;
+    height: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    footer {
+        padding: 60px 0;
+    }
+    
+    .footer-copyright {
+        width: 100%;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: initial;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .footer-logo,
+    .footer-copyright p {
+        margin-bottom: 1rem;
+    }
+    
+    .footer-container {
+        padding: 0 5%;
+    }
+    
+    .social-links {
+        margin: 1em 0 0 0;
+    }
+
+    .social-ghost {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .footer-25 {
+        width: 50%;
+    }
+
+    .footer-links ul {
+        margin: 0 0 1rem;
+    }
 }
