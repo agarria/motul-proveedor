@@ -229,7 +229,7 @@ body {
     padding: 0;
     margin: 0;
     color: #151515;
-    background: #fff;
+    background: #151515;
     user-select: none;
     -webkit-user-select: none;
     scroll-behavior: smooth;
@@ -1178,13 +1178,33 @@ select {
     float: left;
     width: 100%;
     height: auto;
-    padding: 100px 75px;
-    margin: 0;
+    padding: 0 100px 100px;
+    margin: 60px 0 0 0;
     background: url('../img/category.jpg');
     background-attachment: scroll;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.option-selection .title {
+    height: 300px;
+    margin: 0;
+}
+
+.option-selection .title .text {
+    padding: 0 0 0 30px;
+    border-left: 20px solid #fff;
+}
+
+.options {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .option {
@@ -1195,8 +1215,22 @@ select {
     float: left;
     width: 25%;
     height: auto;
-    padding: 25px;
+    padding: 20px;
     margin: 0;
+}
+
+.option label {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .main {
@@ -1205,10 +1239,9 @@ select {
     float: left;
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 20px;
     margin: 0;
-    border: 2px solid #fff;
-    border-radius: 5px;
+    background: #ED1C24;
 }
 
 .head {
@@ -1217,14 +1250,106 @@ select {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px 0;
+    height: 100px;
+    padding: 0;
     margin: 0;
-    background: #fff;
+    overflow: hidden;
 }
 
 .head img {
-    width: auto;
-    height: 100px;
+    filter: invert(1);
+    width: 100px;
+    height: auto;
+}
+
+.this-selection {
+    font-family: 'Graphik Bold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.history {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0 100px 100px;
+    margin: 60px 0 0 0;
+    background: url('../img/category.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.history .title {
+    height: 300px;
+    margin: 0;
+}
+
+.history .title .text {
+    padding: 0 0 0 30px;
+    border-left: 20px solid #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #151515;
+}
+
+th,
+td {
+    color: #fff;
+    padding: 15px;
+    border: 2px solid #000;
+}
+
+th  {
+    font-size: 20px;
+    background: #000;
+    font-family: 'Graphik Bold';
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 16px;
+    font-family: 'Graphik Medium';
+    text-align: center;
+}
+
+td:nth-child(4) {
+    text-align: right;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.badge-red {
+    background: #ED1C24;
+}
+
+.badge-green {
+    background: #008744;
+}
+
+.badge-gray {
+    background: #666;
 }
 
 @media only screen and (max-width: 1000px) {
