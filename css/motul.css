@@ -1352,7 +1352,56 @@ td:nth-child(4) {
     background: #666;
 }
 
+.open-menu-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 1000px) {
+
+    .open-menu-mobile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 70px;
+        height: 60px;
+        cursor: pointer;
+        border-left: 1px solid #fff;
+    }
+
+    .lines {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 3px;
+        background: #ec1d23;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    .lines:before,
+    .lines:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background: #ec1d23;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        -webkit-transform-origin: 0.28571rem center;
+        transform-origin: 0.28571rem center;
+    }
+
+    .lines:before {
+        top: 8px;
+    }
+
+    .lines:after {
+        top: -8px;
+    }
 
     footer {
         padding: 60px 0;
