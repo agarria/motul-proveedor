@@ -1480,7 +1480,7 @@ td:nth-child(4) {
         top: 60px;
         right: 0;
         display: block;
-        width: 140px;
+        width: 50%;
         height: calc(100% - 60px);
         padding: 0;
         margin: 0;
@@ -1504,7 +1504,7 @@ td:nth-child(4) {
     .show-shop-mobile #filters,
     .show-shop-mobile main,
     .show-shop-mobile footer {
-        transform: translate(-140px,0);
+        transform: translate(-50%,0);
     }
 
     .to-select {
@@ -1512,11 +1512,14 @@ td:nth-child(4) {
     }
 
     .to-select input {
+        -webkit-appearance: none;
+        appearance: none;
         width: calc(100% / 3);
         height: 50px;
         font-size: 12px;
         padding: 0 10px;
         text-align: center;
+        border-radius: 0 !important; 
     }
 
     .to-select input:last-child {
