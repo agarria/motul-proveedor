@@ -28,7 +28,6 @@
             <img src="img/logo.svg">
         </span>
         <div class="links">
-            <a href="/productos">productos</a>
             <a href="/historial">historial</a>
             <a href="/categorias">categorias</a>
         </div>
@@ -37,20 +36,135 @@
                 <span class="top">Seleccionado</span>
                 <span class="cases">
                     <span>10</span>
-                    <label>cases</label>
+                    <label>cajas</label>
                 </span>
                 <span class="cases">
-                    <span>50</span>
+                    <span>60</span>
                     <label>unidades</label>
                 </span>
+                <span class="cases">
+                    <span>900</span>
+                    <label>litros</label>
+                </span>
             </div>
-            <a class="red" href="">Resumen del pedido</a>
+            <a class="red" onclick="shop_desktop()">Resumen del pedido</a>
             <a class="black" href="">cerrar sesión</a>
-            <a id="menu_icon" class="open-menu-mobile" onclick="menu_mobile()">
-                <span class="lines"></span>
-            </a>
         </div>
+        <a class="mobile-shop" onclick="shop_mobile()">
+            <span class="icon-cart">
+                <span class="cart-counter">12</span>
+            </span>
+        </a>
+        <a id="menu_icon" class="open-menu-mobile" onclick="menu_mobile()">
+            <span class="lines"></span>
+        </a>
     </nav>
+    <div id="shop_desktop">
+        
+    </div>
+    <div id="menu_mobile" class="menu-mobile">
+        <div class="mobile-content">
+            <a class="mobile-link" href="">Historial</a>
+            <a class="mobile-link" href="">productos</a>
+            <a class="mobile-link" href="">categorias</a>
+            <a class="mobile-link" href="">Orden de pago</a>
+            <a class="mobile-link" href="">cerrar sesión</a>
+        </div>
+    </div>
+    <div class="shop-mobile">
+        <div class="resume-items">
+            <table>
+                <tr>
+                    <td>
+                        <img src="img/product-0.png">
+                    </td>
+                    <td>10x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-1.png">
+                    </td>
+                    <td>23x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-2.png">
+                    </td>
+                    <td>4x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-3.png">
+                    </td>
+                    <td>6x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-4.png">
+                    </td>
+                    <td>1x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-0.png">
+                    </td>
+                    <td>10x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-1.png">
+                    </td>
+                    <td>23x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-2.png">
+                    </td>
+                    <td>4x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-3.png">
+                    </td>
+                    <td>6x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/product-4.png">
+                    </td>
+                    <td>1x</td>
+                    <td>5100 4T 10W-50</td>
+                </tr>
+            </table>
+        </div>
+        <span class="global-total">
+            Q6,000.20
+        </span>
+        <div class="resume-total">
+            <span class="cases">
+                <span>10</span>
+                <label>cajas</label>
+            </span>
+            <span class="cases">
+                <span>10</span>
+                <label>uni.</label>
+            </span>
+            <span class="cases">
+                <span>10</span>
+                <label>litros</label>
+            </span>
+        </div>
+        <a class="inputs-actions">ordenar</a>
+    </div>
     <header>
         <span class="title">
             <div class="text">
@@ -540,6 +654,16 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 <script type="text/javascript">
+    function shop_desktop() {
+        var resume = document.getElementById("shop_desktop");
+        resume.classList.toggle("show-shop-desktop");
+    }
+
+    function shop_mobile() {
+        var body = document.getElementById("body");
+        body.classList.toggle("show-shop-mobile");
+    }
+
     function menu_mobile() {
         var menu = document.getElementById("menu_mobile");
         var icon = document.getElementById("menu_icon");
